@@ -16,33 +16,36 @@ public class Students {
         this.surname = surname;
         this.faculty = faculty;
         this.course = course;
-        this.group =group;
+        this.group = group;
         this.averageMark = averageMark;
     }
-    public Students(){
+
+    public Students() {
     }
 
-    public void info(){
-        System.out.println("\nID: "+ id);
-        System.out.println("Name: "+ name);
-        System.out.println("Surname: "+ surname);
-        System.out.println("Faculty: "+ faculty);
-        System.out.println("Course: "+ course);
-        System.out.println("Group: "+ group);
-        System.out.println("Average Mark: "+ averageMark);
+    public void info() {
+        System.out.println("\nID: " + id);
+        System.out.println("Name: " + name);
+        System.out.println("Surname: " + surname);
+        System.out.println("Faculty: " + faculty);
+        System.out.println("Course: " + course);
+        System.out.println("Group: " + group);
+        System.out.println("Average Mark: " + averageMark);
     }
-    public void changeGroup (String newGroup){
+
+    public void changeGroup(String newGroup) {
         group = newGroup;
-        System.out.println("Новая группа: "+ newGroup);
+        System.out.println("Новая группа: " + newGroup);
     }
-    public String getGroup(){
+
+    public String getGroup() {
         return group;
     }
 
-    public void changeMarkAndGroup (int newMark, String newGroup){
-       averageMark = newMark;
-       group = newGroup;
-        System.out.print("Mark changed to: " + newMark + "\nGroup changed to: "+ newGroup +"\n");
+    public void changeMarkAndGroup(int newMark, String newGroup) {
+        averageMark = newMark;
+        group = newGroup;
+        System.out.print("Mark changed to: " + newMark + "\nGroup changed to: " + newGroup + "\n");
     }
 
     public Students[] getStudents(Students[] studentsArray, int mark) {
@@ -52,7 +55,6 @@ public class Students {
                 count++;
             }
         }
-
         Students[] result = new Students[count];
         int index = 0;
         for (Students studentWithHigherMark : studentsArray) {
@@ -63,14 +65,6 @@ public class Students {
         }
         return result;
     }
-
-
-
-
-
-
-
-
 }
 
 
